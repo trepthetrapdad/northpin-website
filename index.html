@@ -12,9 +12,7 @@
 <meta property="og:url" content="https://northpin.se/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,6 +26,8 @@
 }
 </script>
 <style>
+  /* Manrope, hosted on this site (no calls to Google). License: fonts/OFL.txt */
+  @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/manrope-latin.woff2) format('woff2'); }
   :root {
     --navy: #16294a;
     --navy-2: #22386050;
@@ -240,7 +240,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Northpin · Stockholm</span>
-    <span>Godkänd för F-skatt · <a href="mailto:info@northpin.se">info@northpin.se</a></span>
+    <span>Godkänd för F-skatt · <a href="integritet.html">Integritet</a> · <a href="mailto:info@northpin.se">info@northpin.se</a></span>
   </div>
 </footer>
 
