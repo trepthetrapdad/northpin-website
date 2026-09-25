@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northpin – Hemsida och Google-profil för småföretag i Stockholm</title>
+<meta name="description" content="Northpin hjälper småföretag i Stockholm att synas på Google och Google Maps: Google-företagsprofil, enkel hemsida och svar på recensioner. Börja med en gratis granskning.">
+<link rel="canonical" href="https://northpin.se/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Northpin – syns ert företag på Google?">
+<meta property="og:description" content="Google-företagsprofil, hemsida och recensioner för småföretag i Stockholm. Gratis granskning.">
+<meta property="og:url" content="https://northpin.se/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Northpin",
+  "url": "https://northpin.se/",
+  "email": "info@northpin.se",
+  "description": "Google-företagsprofil, hemsida och svar på recensioner för småföretag i Stockholm.",
+  "areaServed": { "@type": "City", "name": "Stockholm" },
+  "logo": "https://northpin.se/favicon.svg"
+}
+</script>
+<style>
+  :root {
+    --navy: #16294a;
+    --navy-2: #22386050;
+    --amber: #f2a93b;
+    --paper: #f6f4ef;
+    --ink: #1c2230;
+    --muted: #5b6272;
+    --card: #ffffff;
+    --line: #e3dfd6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Manrope, system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  header { background: var(--navy); color: #fff; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand svg { width: 34px; height: 34px; }
+  .brand span { font-weight: 800; letter-spacing: 4px; font-size: 18px; }
+  .nav-cta { text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid #ffffff66; padding: 8px 14px; border-radius: 999px; }
+  .nav-cta:hover { border-color: var(--amber); }
+
+  .hero { padding: 56px 0 72px; }
+  .hero h1 { font-size: clamp(32px, 5.5vw, 54px); line-height: 1.1; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.5px; max-width: 760px; }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero p { font-size: clamp(17px, 2.2vw, 20px); max-width: 640px; margin: 0 0 28px; color: #dfe5ef; }
+  .btn { display: inline-block; background: var(--amber); color: var(--navy); text-decoration: none; font-weight: 800; padding: 14px 22px; border-radius: 999px; }
+  .btn:hover { filter: brightness(1.05); }
+  .hero small { display: block; margin-top: 12px; color: #b9c3d4; font-size: 14px; }
+
+  section { padding: 64px 0; }
+  h2 { font-size: clamp(26px, 3.6vw, 36px); line-height: 1.2; margin: 0 0 12px; font-weight: 800; color: var(--navy); }
+  .lead { color: var(--muted); max-width: 640px; margin: 0 0 32px; font-size: 18px; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 20px; color: var(--navy); }
+  .card p { margin: 0; color: var(--muted); }
+  .icon { width: 40px; height: 40px; border-radius: 10px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .icon svg { width: 22px; height: 22px; }
+
+  .prices { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .price { display: flex; flex-direction: column; }
+  .price .amount { font-size: 26px; font-weight: 800; color: var(--navy); margin: 10px 0 2px; }
+  .price .monthly { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+  .price ul { margin: 0; padding-left: 18px; color: var(--ink); }
+  .price li { margin-bottom: 4px; }
+  .price.featured { border: 2px solid var(--amber); }
+  .tag { align-self: flex-start; background: #fdf0da; color: #8a5a10; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+  .note { color: var(--muted); font-size: 14px; margin-top: 18px; }
+
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .steps li { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .steps li::before { content: counter(s); display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--amber); color: var(--navy); font-weight: 800; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .steps strong { display: block; color: var(--navy); font-size: 18px; margin-bottom: 4px; }
+  .steps span { color: var(--muted); }
+
+  .promise { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .promise div { background: var(--card); border-left: 4px solid var(--amber); border-radius: 8px; padding: 16px 20px; }
+  .promise strong { color: var(--navy); }
+
+  .contact { background: var(--navy); color: #fff; text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { color: #dfe5ef; max-width: 560px; margin: 0 auto 26px; font-size: 18px; }
+  .mail { display: block; margin-top: 14px; color: #fff; font-weight: 600; }
+
+  footer { background: #0f1d36; color: #9aa6ba; font-size: 14px; padding: 24px 0; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 820px) {
+    .grid, .steps, .promise { grid-template-columns: 1fr; }
+    .hero { padding: 36px 0 56px; }
+    section { padding: 48px 0; }
+    .nav-cta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="/" aria-label="Northpin startsida">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#fff" stroke-width="4"/><path d="M32 9 42 32H22Z" fill="#f2a93b"/><path d="M22 32H42L32 55Z" fill="#fff"/></svg>
+        <span>NORTHPIN</span>
+      </a>
+      <a class="nav-cta" href="#kontakt">Gratis granskning</a>
+    </nav>
+    <div class="hero">
+      <h1>Syns ert företag när kunderna <em>söker på Google?</em></h1>
+      <p>Northpin hjälper småföretag i Stockholm, som salonger, caféer, butiker och hantverkare, att hittas på Google och Google Maps och få fler kunder.</p>
+      <a class="btn" href="#kontakt">Boka en gratis granskning</a>
+      <small>Vi går igenom hur ni syns i dag och visar tre konkreta förbättringar. Helt kostnadsfritt.</small>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="tjanster">
+    <div class="wrap">
+      <h2>Det här hjälper vi till med</h2>
+      <p class="lead">Tre saker som avgör om en kund i närheten väljer er, eller konkurrenten ett kvarter bort.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="#f2a93b"/></svg></div>
+          <h3>Google-företagsprofil</h3>
+          <p>Vi skapar, fyller i och optimerar er profil: rätt kategori, öppettider, bilder och texter, så att ni syns på Google Maps när kunder i närheten söker (lokal SEO).</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#f2a93b" stroke-width="2"/><path d="M3 9h18" stroke="#f2a93b" stroke-width="2"/></svg></div>
+          <h3>Hemsida för småföretag</h3>
+          <p>En enkel och snabb hemsida med priser, meny eller bokning, på er egen domän. Fungerar perfekt i mobilen, där de flesta kunder letar.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" fill="#f2a93b"/></svg></div>
+          <h3>Google-recensioner</h3>
+          <p>Vi hjälper er att svara på recensioner, snabbt och personligt. Kunder, och Google, märker företag som bryr sig om vad kunderna säger.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="prices" id="priser">
+    <div class="wrap">
+      <h2>Priser</h2>
+      <p class="lead">Enkla paket. Exakt pris beror på hur mycket som behöver göras, det får ni veta efter granskningen.</p>
+      <div class="grid">
+        <article class="card price">
+          <h3>Gratis granskning</h3>
+          <div class="amount">0 kr</div>
+          <div class="monthly">Helt utan förpliktelser</div>
+          <ul>
+            <li>Genomgång av er Google-profil</li>
+            <li>Hur ni syns jämfört med konkurrenterna</li>
+            <li>Tre konkreta förbättringar</li>
+          </ul>
+        </article>
+        <article class="card price">
+          <h3>Synlig</h3>
+          <div class="amount">från 3 500 kr</div>
+          <div class="monthly">+ från 495 kr/mån</div>
+          <ul>
+            <li>Google-profilen fixad och komplett</li>
+            <li>Enkel hemsida på er egen domän</li>
+            <li>Drift, små ändringar och uppdatering av profilen</li>
+          </ul>
+        </article>
+        <article class="card price featured">
+          <span class="tag">Mest värde</span>
+          <h3>Synlig + Recensioner</h3>
+          <div class="amount">från 3 500 kr</div>
+          <div class="monthly">+ från 995 kr/mån</div>
+          <ul>
+            <li>Allt i Synlig</li>
+            <li>Svar på era Google-recensioner</li>
+            <li>2 inlägg i er Google-profil per månad</li>
+            <li>Månadsrapport: så hittar kunderna er</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">Alla priser exklusive moms.</p>
+    </div>
+  </section>
+
+  <section id="sa-gar-det-till">
+    <div class="wrap">
+      <h2>Så går det till</h2>
+      <p class="lead">Ingen teknisk kunskap behövs från er sida.</p>
+      <ol class="steps">
+        <li><strong>Gratis granskning</strong><span>Vi tittar på hur ni syns på Google i dag och visar vad som kan bli bättre.</span></li>
+        <li><strong>Vi fixar det</strong><span>Profil, hemsida och texter, oftast klart inom ett par veckor.</span></li>
+        <li><strong>Ni får fler kunder</strong><span>Vi håller allt uppdaterat och visar varje månad hur det går.</span></li>
+      </ol>
+      <div class="promise" style="margin-top:28px">
+        <div><strong>Allt ägs av er.</strong> Domän, Google-profil och konton står i ert namn, inte vårt. Vi läggs bara till som hjälp.</div>
+        <div><strong>Inga falska recensioner, någonsin.</strong> Bara ärliga svar till riktiga kunder. Det är både rätt och det Google belönar.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <h2>Boka en gratis granskning</h2>
+      <p>Skicka ert företagsnamn så hör vi av oss med en genomgång av hur ni syns på Google i dag.</p>
+      <a class="btn" href="mailto:info@northpin.se?subject=Gratis%20granskning">Mejla oss</a>
+      <a class="mail" href="mailto:info@northpin.se">info@northpin.se</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Northpin · Stockholm</span>
+    <span>Godkänd för F-skatt · <a href="mailto:info@northpin.se">info@northpin.se</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
