@@ -45,12 +45,16 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
 
   header { background: var(--navy); color: #fff; }
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .brand svg { width: 34px; height: 34px; }
-  .brand span { font-weight: 800; letter-spacing: 4px; font-size: 18px; }
-  .nav-cta { text-decoration: none; font-weight: 600; font-size: 15px; border: 1.5px solid #ffffff66; padding: 8px 14px; border-radius: 999px; }
-  .nav-cta:hover { border-color: var(--amber); }
+  .topbar { position: sticky; top: 0; z-index: 10; background: var(--navy); color: #fff; border-bottom: 1px solid #ffffff1f; }
+  nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+  .brand svg { width: 32px; height: 32px; }
+  .brand span { font-weight: 800; letter-spacing: 4px; font-size: 17px; }
+  .menu { display: flex; gap: 22px; }
+  .menu a { text-decoration: none; font-weight: 600; font-size: 15px; color: #dfe5ef; white-space: nowrap; }
+  .menu a:hover { color: var(--amber); }
+  .menu a.cta { color: var(--navy); background: var(--amber); padding: 7px 14px; border-radius: 999px; margin: -7px 0; }
+  section[id] { scroll-margin-top: 110px; }
 
   .hero { padding: 56px 0 72px; }
   .hero h1 { font-size: clamp(32px, 5.5vw, 54px); line-height: 1.1; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.5px; max-width: 760px; }
@@ -103,21 +107,34 @@
     .grid, .steps, .promise { grid-template-columns: 1fr; }
     .hero { padding: 36px 0 56px; }
     section { padding: 48px 0; }
-    .nav-cta { display: none; }
+    nav { flex-direction: column; align-items: stretch; gap: 10px; padding: 12px 0 10px; }
+    .menu { justify-content: space-between; gap: 8px; }
+    .menu a { font-size: 14px; }
+    .menu a.cta { padding: 6px 12px; margin: -6px 0; }
   }
 </style>
 </head>
 <body>
 
-<header>
+<div class="topbar">
   <div class="wrap">
     <nav>
-      <a class="brand" href="/" aria-label="Northpin startsida">
+      <a class="brand" href="#" aria-label="Northpin, till toppen">
         <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="#fff" stroke-width="4"/><path d="M32 9 42 32H22Z" fill="#f2a93b"/><path d="M22 32H42L32 55Z" fill="#fff"/></svg>
         <span>NORTHPIN</span>
       </a>
-      <a class="nav-cta" href="#kontakt">Gratis granskning</a>
+      <div class="menu">
+        <a href="#tjanster">Tjänster</a>
+        <a href="#priser">Priser</a>
+        <a href="#sa-funkar-det">Så funkar det</a>
+        <a class="cta" href="#kontakt">Kontakt</a>
+      </div>
     </nav>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
     <div class="hero">
       <h1>Syns ert företag när kunderna <em>söker på Google?</em></h1>
       <p>Northpin hjälper småföretag i Stockholm, som salonger, caféer, butiker och hantverkare, att hittas på Google och Google Maps och få fler kunder.</p>
@@ -185,7 +202,7 @@
           <ul>
             <li>Allt i Synlig</li>
             <li>Svar på era Google-recensioner</li>
-            <li>2 inlägg i er Google-profil per månad</li>
+            <li>2 nyheter eller erbjudanden i er Google-profil per månad</li>
             <li>Månadsrapport: så hittar kunderna er</li>
           </ul>
         </article>
@@ -194,9 +211,9 @@
     </div>
   </section>
 
-  <section id="sa-gar-det-till">
+  <section id="sa-funkar-det">
     <div class="wrap">
-      <h2>Så går det till</h2>
+      <h2>Så funkar det</h2>
       <p class="lead">Ingen teknisk kunskap behövs från er sida.</p>
       <ol class="steps">
         <li><strong>Gratis granskning</strong><span>Vi tittar på hur ni syns på Google i dag och visar vad som kan bli bättre.</span></li>
