@@ -1,0 +1,16 @@
+{
+  // Cloudflare settings for northpin.se (static site, no server code).
+  // Deploy from this folder: npx wrangler deploy
+  // .assetsignore keeps .git and settings files off the public site.
+  "name": "northpin",
+  "compatibility_date": "2026-09-29",
+  // No request logging: the privacy page promises no tracking.
+  "observability": { "enabled": false },
+  "assets": { "directory": "." },
+  // Serve on the real domain only, not on a workers.dev copy.
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "northpin.se", "custom_domain": true },
+    { "pattern": "www.northpin.se", "custom_domain": true }
+  ]
+}

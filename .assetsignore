@@ -1,0 +1,9 @@
+# Never publish these (Cloudflare Workers static assets)
+.git
+.git/
+.wrangler
+.gitignore
+.gitattributes
+.assetsignore
+wrangler.jsonc
+CNAME
